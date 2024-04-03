@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c03bbeea0aba7e48b5379f4fa3f4401, type: 3}
+  m_Name: NewStory 3
+  m_EditorClassIdentifier: 
+  storyNumber: 0
+  storyType: 0
+  storyDone: 0
+  storyText: 
+  options:
+  - optionText: 
+    buttonText: 
+    eventCheck:
+      checkValue: 0
+      evenType: 0
+      successResult: []
+      failResult: []
