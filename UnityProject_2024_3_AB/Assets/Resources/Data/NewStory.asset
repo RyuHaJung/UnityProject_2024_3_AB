@@ -9,18 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c03bbeea0aba7e48b5379f4fa3f4401, type: 3}
+  m_Script: {fileID: 11500000, guid: 0721ec4f600e4ee439968b3e9e37b41e, type: 3}
   m_Name: NewStory
   m_EditorClassIdentifier: 
   storyNumber: 0
+  mainImage: {fileID: 0}
   storyType: 0
   storyDone: 0
   storyText: 
-  options:
-  - optionText: 
-    buttonText: 
-    eventCheck:
-      checkValue: 0
-      evenType: 0
-      successResult: []
-      failResult: []
+  options: []
