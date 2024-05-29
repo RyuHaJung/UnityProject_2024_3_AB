@@ -44,7 +44,10 @@ public class GameSystem : MonoBehaviour
     public int currentStoryIndex = 1;
     public StoryModel[] stroyModels;
 
-
+    public void Start()
+    {
+        ChangeState(GAMESTATE.STROYSHOW);
+    }
 
 #if UNITY_EDITOR
     [ContextMenu("Reset Story Models")]
@@ -54,12 +57,70 @@ public class GameSystem : MonoBehaviour
     }
 #endif
 
+    public void ChangeState(GAMESTATE temp)
+    {
+        currentState = temp;
+        
+        if(currentState == GAMESTATE.STROYSHOW)
+        {
+            StoryShow(currentStoryIndex);
+        }
+    }
+
+
+    public void ApplyChoice(StoryModel.Reuslt result)
+    {
+        switch(result.resultType)
+        {
+            case StoryModel.Reuslt.ResultType.ChangeHp:
+                stats.currentHpPoint += result.value;
+                ChangeStats(result);
+                break;
+
+            case StoryModel.Reuslt.ResultType.AddExperience:
+                stats.currentXpPoint += result.value;
+                ChangeStats(result);
+                break;
+            case StoryModel.Reuslt.ResultType.GoToNextStory:
+                currentStoryIndex = result.value;
+                ChangeState(GAMESTATE.STROYSHOW);
+                ChangeStats(result);
+                break;
+
+            case StoryModel.Reuslt.ResultType.GoToRandomStory:
+                RandomStory();
+                ChangeState(GAMESTATE.STROYSHOW);
+                ChangeStats(result);
+                break;
+            default:
+                Debug.LogError("Unknown type");
+                break;
+        }
+    }
+
+    public void ChangeStats(StoryModel.Reuslt result)
+    {
+        if (result.stats.hpPoint > 0) stats.hpPoint += result.stats.hpPoint;
+        if (result.stats.spPoint > 0) stats.spPoint += result.stats.spPoint;
+
+        if (result.stats.currentHpPoint > 0) stats.currentHpPoint += result.stats.currentHpPoint;
+        if (result.stats.currentSpPoint > 0) stats.currentSpPoint += result.stats.currentSpPoint;
+        if (result.stats.currentXpPoint > 0) stats.currentXpPoint += result.stats.currentXpPoint;
+
+        if (result.stats.strength > 0) stats.strength += result.stats.strength;
+        if (result.stats.dexterity > 0) stats.dexterity += result.stats.dexterity;
+        if (result.stats.consitytion > 0) stats.consitytion += result.stats.consitytion;
+        if (result.stats.wisdom > 0) stats.wisdom += result.stats.wisdom;
+        if (result.stats.Intelligence > 0) stats.Intelligence += result.stats.Intelligence;
+        if (result.stats.charisma > 0) stats.charisma += result.stats.charisma;
+    }
+
     public void StoryShow(int number)
     {
         StoryModel tempStoryModels = FindStoryModel(number);
 
-        //StorySystem.Instace.currentStoryModel = tempStoryMoels;
-        //StorySystem.Instance.CoShowText();
+        StorySystem.instance.currentStoryModel = tempStoryModels;
+        StorySystem.instance.CoShowText();
     }
 
     StoryModel FindStoryModel(int number)
