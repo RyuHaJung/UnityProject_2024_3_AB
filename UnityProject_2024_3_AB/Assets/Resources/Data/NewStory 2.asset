@@ -16,24 +16,28 @@ MonoBehaviour:
   mainImage: {fileID: 10309, guid: 0000000000000000f000000000000000, type: 0}
   storyType: 0
   storyDone: 0
-  storyText: "\uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 
-    \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8
-    \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0
-    \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8
-    \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0
-    \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8
-    \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0
-    \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8
-    \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0
-    \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8
-    \uBA54\uC2DC\uC9C0"
+  storyText: "\uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0 \uD14D\uC2A4\uD2B8 \uBA54\uC2DC\uC9C0  "
   options:
   - optionText: "\uC120\uD0DD\uC9C0 1"
     buttonText: "\uC120\uD0DD\uC9C0 1"
     eventCheck:
       checkvalue: 0
       eventType: 0
-      sucessResult: []
+      sucessResult:
+      - resultType: 4
+        value: 1
+        stats:
+          hpPoint: 0
+          spPoint: 0
+          currentHpPoint: 0
+          currentSpPoint: 0
+          currentXpPoint: 0
+          strength: 0
+          dexterity: 0
+          consitytion: 0
+          Intelligence: 0
+          wisdom: 0
+          charisma: 0
       fulseResult: []
   - optionText: "\uC120\uD0DD\uC9C0 2"
     buttonText: "\uC120\uD0DD\uC9C0 2"
